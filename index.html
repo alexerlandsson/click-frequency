@@ -1,0 +1,48 @@
+<!--
+Date:       2015-01-19
+Author:     Alexander Erlandsson
+GitHub:     https://github.com/alexerlandsson
+
+Description:
+This script runs a function if the click frequency is not higher than a specific speed.
+It works by adding a timout to run the funtion after a specific time into an array that
+later gets cleared after every click. If it not gets cleared, the clickTooSlow function
+will trigger.
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Click frequency</title>   
+</head>
+<body>
+    
+    <h1>JavaScript - Click frequency</h1>
+    <p>Click the button with a frequency faster than <span id="min-click-speed"></span> milliseconds to avoid the clickTooSlow() funciton to trigger.</p>
+    <button onclick="clickFunction()">Click here</button>
+    <p id="output"></p>
+    
+    <script>
+        var minClickSpeed = 1000;
+        var clickTimeouts = [];
+        
+        document.getElementById('min-click-speed').innerHTML = minClickSpeed;
+        
+        function clickFunction() {
+            for (var i = 0; i < clickTimeouts.length; i++) { clearTimeout(clickTimeouts[i]); }
+            document.getElementById('output').innerHTML = "";
+            
+            clickTimeouts.push(setTimeout(clickTooSlow, minClickSpeed));
+        }
+        
+        function clickTooSlow() { 
+        //Function that got triggered if the click frequency is not higher than the minClickSpeed.
+        //Put your script here.    
+            
+        //Sample output...
+        document.getElementById('output').innerHTML = "Your click frequency is lower than " + minClickSpeed + " millisecond(s)";
+        }
+    </script>
+    
+</body>
+</html>
