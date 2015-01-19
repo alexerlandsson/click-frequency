@@ -1,4 +1,4 @@
-<!--
+/*
 Date:       2015-01-19
 Author:     Alexander Erlandsson
 GitHub:     https://github.com/alexerlandsson
@@ -8,7 +8,7 @@ This script runs a function if the click frequency is not higher than a specific
 It works by adding a timout to run the funtion after a specific time into an array that
 later gets cleared after every click. If it not gets cleared, the clickTooSlow function
 will trigger.
--->
+*/
 
 var minClickSpeed = 1000;
 var clickTimeouts = [];
