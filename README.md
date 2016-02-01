@@ -7,9 +7,7 @@ This JavaScript will trigger a function if the click frequency is not high enoug
 </ul>
 
 ```javascript
-  function clickFunction() {
-    //Some code here...
-  }
+  clickFunction();
 ```
 
 <ul>
