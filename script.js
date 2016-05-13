@@ -15,8 +15,6 @@ var clickTimeouts = [];
 
 function clickFunction() {
     for (var i = 0; i < clickTimeouts.length; i++) { clearTimeout(clickTimeouts[i]); }
-    document.getElementById('output').innerHTML = "";
-    
     clickTimeouts.push(setTimeout(clickTooSlow, minClickSpeed));
 }
 
