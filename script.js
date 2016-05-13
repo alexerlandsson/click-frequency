@@ -19,5 +19,5 @@ function clickFunction() {
 }
 
 function clickTooSlow() { 
-    //Some code here...
+    //What happens when you click too slow here...
 }
